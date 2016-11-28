@@ -56,9 +56,16 @@ public:
 		// FIXME 1b: iterate through all the persons here.
 		std::list<std::string>::iterator it = room.begin();
 		do {
-			std::cout << *it << "->";
-			++it;
+
+			if (it + 1  == room.end())
+				std::cout << std::endl;
+			else
+			{
+				std::cout << *it << "->";
+				++it;
+			}
 		} while (it != room.end());
+
 		std::cout << std::endl;
 	}
 
