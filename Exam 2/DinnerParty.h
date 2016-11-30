@@ -42,8 +42,7 @@ public:
 		*/
 		room.push_front(name);
 		std::list<std::string>::iterator it = room.begin();
-		DinnerParty *newParty = new DinnerParty();
-		PartyTicket *ticket = new DinnerPartyTicket(newParty, it);
+		PartyTicket *ticket = new DinnerPartyTicket(this, it);
 
 		return ticket;
 
@@ -57,13 +56,15 @@ public:
 		std::list<std::string>::iterator it = room.begin();
 		do {
 
-			if (it + 1  == room.end())
+			std::cout << *it;
+
+			if (it->npos == NULL)
 				std::cout << std::endl;
 			else
-			{
-				std::cout << *it << "->";
+				std::cout << "->";
+
 				++it;
-			}
+
 		} while (it != room.end());
 
 		std::cout << std::endl;

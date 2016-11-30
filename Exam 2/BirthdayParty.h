@@ -27,8 +27,7 @@ public:
 	{
 		PartyRoom.push_front(name);
 		std::list<std::string>::iterator it = PartyRoom.begin();
-		BirthdayParty *newParty = new BirthdayParty();
-		PartyTicket *ticket = new BirthdayPartyTicket(newParty, it);
+		PartyTicket *ticket = new BirthdayPartyTicket(this, it);
 
 		return ticket;
 	}
@@ -36,8 +35,16 @@ public:
 	void list() // lists all the people at the birthday party
 	{
 		std::list<std::string>::iterator it = PartyRoom.begin();
-		std::cout << *it << "->";
-		++it;
+		do {
+			std::cout << *it;
+
+			if (it->npos == NULL)
+				std::cout << std::endl;
+			else
+				std::cout << "->";
+
+			++it;
+		} while (it != PartyRoom.end());
 	}
 
 	void remove(std::list<std::string>::iterator it)
