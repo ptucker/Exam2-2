@@ -4,6 +4,18 @@
 *
 * @authors Everyone!
 */
+
+/*
+Dinner Party:                    27/30 -- push_front needs try/catch
+                                     -- list is cleaner with a for loop
+Birthday Party:                  20/20 -- same issues as above
+Birthday Party Ticket:           20/20
+Party Factory:                   20/10
+Comments and Well-Designed Code: 18/20 -- Remove FIXME's
+
+TOTAL:                           95/100
+*/
+
 #include <iostream>
 #include <string>
 #include "Party.h"
